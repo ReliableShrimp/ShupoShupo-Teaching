@@ -11,6 +11,11 @@ This space is dedicated entirely to **AI Engineering, ML Engineering, Graph ML, 
 
 I built this repository to save you the absolute nightmare of mapping out a study plan—because let's be honest, nobody actually wants to sit down and make one. Except me. So, you're welcome. You're here now.
 
+## Polished vs Unpolished 
+
+*   **`/unpolished` (Raw proof that I actually wrote this)**: The raw, chronological proof of work. It is full of syntax errors, broken dimensions, identity crises, and raw mathematical panic. Go there if you want to see the unedited reality of wrestling with complex architectures - by writting one yourself you will become a master of LaTeX and Unicode.
+*   **`/polished` (The one you will study from)**: The educational blueprint. The bugs are squashed, the explanations are coherent, and the code actually runs without melting your machine.
+
 ## The Fine Print
 
 *   **The Math Tax:** Make sure you have a rock-solid foundation in math. If you don't, you *will* cry like a kid. You've been warned.
