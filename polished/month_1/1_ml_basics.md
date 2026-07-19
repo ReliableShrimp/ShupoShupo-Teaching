@@ -1,4 +1,4 @@
-# Month 1 — ML Basics & Just Enough Math
+# ML Basics & Just Enough Math
 
 Hello, explorer.
 
