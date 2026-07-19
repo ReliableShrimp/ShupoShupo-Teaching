@@ -39,6 +39,11 @@ I built this repository to save you the absolute nightmare of mapping out a stud
 
 * **Q: Will I get a job after this repository?**
 * A: Depends on how many topics you skipped or barely learned. Also depends on my current status... if I get employed, then yeah, you have a chance. But remember to actually build projects! Ask an AI for brutally hard, production-grade project ideas tailored to your target role.
+
+## Roadmap Status
+
+The missing topics will be added in the future... so be patient and, in the meantime, keep yourself hydrated.
+
 ## Spot a Bug?
 
 If you find a bug, a math mistake, a flawed concept, or just something you flat-out don't like, **please let me know**. I am incredibly happy to improve it and make this repo better for everyone.
