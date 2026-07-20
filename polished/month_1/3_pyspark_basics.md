@@ -1,6 +1,6 @@
 # PySpark — From SQL to ML Pipelines
 
-We'll learn `PySpark` already in the second month, because the person writing these notes doesn't really like `pandas`... yeah. But that doesn't mean you shouldn't learn `pandas`! Try it yourself, manage some data with it — but once the GBs get big enough, the problem stops being "buy a better machine" and becomes "manage those bubbly GBs waiting for you," sadly. To manage them, we'll need something built exactly for this: Spark. (There are other tools out there too, but we'll lean on Spark for most of this.)
+We'll learn `PySpark` already in the first month, because the person writing these notes doesn't really like `pandas`... yeah. But that doesn't mean you shouldn't learn `pandas`! Try it yourself, manage some data with it — but once the GBs get big enough, the problem stops being "buy a better machine" and becomes "manage those bubbly GBs waiting for you," sadly. To manage them, we'll need something built exactly for this: Spark. (There are other tools out there too, but we'll lean on Spark for most of this.)
 
 ## 1. PySpark Basics (SQL)
 
