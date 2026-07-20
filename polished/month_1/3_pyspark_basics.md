@@ -2,8 +2,7 @@
 
 We'll learn `PySpark` already in the first month, because the person writing these notes doesn't really like `pandas`... yeah. But that doesn't mean you shouldn't learn `pandas`! Try it yourself, manage some data with it — but once the GBs get big enough, the problem stops being "buy a better machine" and becomes "manage those bubbly GBs waiting for you," sadly. To manage them, we'll need something built exactly for this: Spark. (There are other tools out there too, but we'll lean on Spark for most of this.)
 
-## 1. PySpark Basics (SQL)
-
+---
 Since we already learned `SQL` in the last note, we'll now do the same stuff, but in Python — using `PySpark`. We have two options here: the first is the easy way, the second is a bit more of a nightmare, but you'll probably end up using both eventually (month... 9, maybe? — prediction from 29/06/2026).
 
 The easy way is to write `SQL` inside Python, thanks to `pyspark.sql`.
