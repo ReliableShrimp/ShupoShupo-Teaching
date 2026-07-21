@@ -14,4 +14,10 @@ This is the clean room. If you are here, it means you want to study the concepts
 
 *Found an actual bug or a mathematical flaw here? Open an Issue or submit a PR—let's keep the clean room clean.*
 
+## Disclaimer
+
+All images used in this repository are intended strictly for **non-commercial, educational, and personal learning purposes**. All intellectual property and credit belong to their respective original owners. 
+
+If you are the copyright owner of any image used here and would like it removed or given specific attribution, please open an issue or contact me, and I will update it immediately.
+
 > *AI was used to fix stupid grammar*
