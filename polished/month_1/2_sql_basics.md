@@ -26,6 +26,19 @@ Jokes aside, every company needs you to know more than just your narrow slice of
 
 So we'll start with the architectural basics of data extraction and keep pushing forward. The concepts aren't complex — take a breath, relax, and let's get into it.
 
+## Table of Contents
+
+1. Introduction
+2. Commands of Basic SQL
+   - SELECT and WHERE
+   - Creating, filling, and clearing tables
+   - LIKE, BETWEEN, IN, and IS NULL
+   - COUNT, SUM, AVG, MAX, MIN, and AS
+   - GROUP BY
+   - DISTINCT and JOIN
+   - Window functions: RANK, LAG, LEAD, PARTITION BY
+   - CASE WHEN
+
 ## 1. Introduction
 
 Why do we even need `SQL`? What even is `SQL`?

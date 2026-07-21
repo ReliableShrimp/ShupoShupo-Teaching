@@ -27,7 +27,6 @@ We'll start the easy way... Linear Regression, because life is easy:
 
 ## Table of Contents
 
-# Table of Contents
 1. Linear Regression
 2. Logistic Regression
 3. Decision Tree

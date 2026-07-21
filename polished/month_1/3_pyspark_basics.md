@@ -2,7 +2,38 @@
 
 We'll learn `PySpark` already in the first month, because the person writing these notes doesn't really like `pandas`... yeah. But that doesn't mean you shouldn't learn `pandas`! Try it yourself, manage some data with it — but once the GBs get big enough, the problem stops being "buy a better machine" and becomes "manage those bubbly GBs waiting for you," sadly. To manage them, we'll need something built exactly for this: Spark. (There are other tools out there too, but we'll lean on Spark for most of this.)
 
+## Table of Contents
+
+1. PySpark Basics: SQL-in-Python (the Easy Way)
+    1. SparkSession setup
+    2. createDataFrame
+    3. createOrReplaceTempView
+    4. Full example with spark.sql
+2. PySpark Basics: The DataFrame API (the Programmatic Way)
+    1. Quick intro
+    2. Learning to code
+        1. .select()
+        2. .filter()
+        3. Handling nulls
+    3. Window functions
+        1. partitionBy + rank()
+        2. lag() and lead()
+        3. max(), min(), avg() over a window
+3. PySpark for ML Engineering
+    1. Quick intro
+    2. Learning to code
+        1. Reading data at scale
+        2. VectorAssembler & StringIndexer
+        3. Linear & logistic regression
+        4. Pipelines (Transformers vs. Estimators)
+        5. Loading a saved PipelineModel
+        6. Reading from SQL databases via JDBC
+        7. Final project: hallucination-detection pipeline
+
 ---
+
+## 1. PySpark Basics: SQL-in-Python (the Easy Way)
+
 Since we already learned `SQL` in the last note, we'll now do the same stuff, but in Python — using `PySpark`. We have two options here: the first is the easy way, the second is a bit more of a nightmare, but you'll probably end up using both eventually (month... 9, maybe? — prediction from 29/06/2026).
 
 The easy way is to write `SQL` inside Python, thanks to `pyspark.sql`.
@@ -41,6 +72,8 @@ data_list = [
 columns = ["Name", "Age", "Role", "City", "Country", "Experience_Years"]
 ```
 
+### 1. SparkSession setup
+
 Let's start with the easy way — first, some magic setup code:
 
 ```python
@@ -56,6 +89,8 @@ Word-by-word breakdown:
 - `.master("local[*]")` — highly recommended when writing code on your local machine, since it uses all available cores instead of just one (which would be painfully slow).
 - `.getOrCreate()` — a magic command that checks if you already have a session; if you do, it reuses it, otherwise it creates a new one.
 
+### 2. createDataFrame
+
 Now let's look at our table again, and write:
 
 ```python
@@ -67,6 +102,8 @@ Word-by-word breakdown:
 - `data=<your_list>` — the raw Python object you want it to chop up.
 - `schema=<the_columns_name>` — the variable holding your column names. For example, since our column-name variable is called `columns`, we write `schema=columns`.
 
+### 3. createOrReplaceTempView
+
 Now let's write the next part:
 
 ```python
@@ -77,6 +114,8 @@ Word-by-word breakdown:
 - `.createOrReplace` — creates a table view for you, or, if one already exists under the same name, overwrites it, so we don't get a random error.
 - `TempView` — "Temporary View." Temporary, because it doesn't get saved to disk or anything like that — it only exists while your Python script is running. Once the script stops, it vanishes, since it lives purely in your computer's temporary RAM, not on your hard drive.
 - `("people")` — just the name you give your SQL table, so it's recognized when you write `FROM <the_name_you_gave_it>`.
+
+### 4. Full example with spark.sql
 
 And in the end, you make a variable and write `spark.sql("""..."""")`.
 
@@ -157,7 +196,7 @@ But sadly, after reading all of this, you now have to suffer, because we're abou
 
 ## 2. PySpark Basics: The DataFrame API (a.k.a. the Programmatic Way)
 
-### Quick intro
+### 1. Quick intro
 
 Sadly, the painful part has arrived, and you're probably wondering: why do we need this other version at all, when we could just write SQL in Python and be happy forever? The SQL-in-Python approach falls short in a few real areas where the Programmatic way shines. For example:
 
@@ -188,7 +227,7 @@ Don't worry about it for now — you'll cry over it later, so save your tears fo
 
 **Quick summary:** We use SQL when we want to quickly explore data or write a quick report. We use the DataFrame API when we're building enterprise, automated production pipelines that need to be tested, scaled, and automated.
 
-### Learning to code
+### 2. Learning to code
 
 First, let's spoil ourselves with a table:
 
@@ -379,7 +418,7 @@ Next topic: annoying, so get the napkins ready (I'll get mine ready too). Anyway
 
 So instead we'll learn windows! (Which don't destroy any of the rows.)
 
-### Window functions
+### 3. Window functions
 
 What is a window? A window is an opening in the wall, or ro— ah, got you, jokes aside.
 
@@ -616,7 +655,7 @@ So... it's time for **PySpark for Machine Learning**. We've learned the fundamen
 
 ## 3. PySpark for ML Engineering
 
-### Quick intro
+### 1. Quick intro
 
 Before we even start: in PySpark, `model.fit(X, y)` just isn't going to cut it anymore. PySpark wants us to suffer and learn new ideas, because Spark stores data **distributed across many machines** — having `X` and `y` as two separate objects would constantly require keeping them in sync across partitions, and that's just not worth it for Spark.
 
@@ -682,7 +721,7 @@ Could've gone faster — your pay's getting cut by 20%."
 
 Life is sad, so that's how it works — but no worries, let's keep learning.
 
-### Learning to code
+### 2. Learning to code
 
 Sadly, the ad break's over, and now we have to code. But honestly, the first topic isn't even that hard — we just need to change a bit of what we're used to doing. In a real work environment, we won't get handed a plain Python list slammed into VS Code or Neovim — the data will live in a file holding all the info. That file might have 500K lines, or even 500M+; we don't know. But let me explain why using the old method here is wrong:
 
