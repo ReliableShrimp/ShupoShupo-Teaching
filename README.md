@@ -26,8 +26,7 @@ I built this repository to save you the absolute nightmare of mapping out a stud
 
 * **Q: In how many months can you study all of this?**
 * A: I wrote 12 months, but numbers can be deceiving... so an honest guess is... 
-  $$\frac{1}{\cosh(0)} \left( \int_{0}^{2} (3x^2 + 2) \,dx \right) = 12 \text{ months}$$ 
-  ...yeah, still 12 months.
+  $$\frac{1}{\cosh(0)} \left( \int_{0}^{2} (3x^2 + 2) \,dx \right), yeah, this is still my guess, just try harder.
 
 * **Q: What will I be able to build after finishing this teaching repo?**
 * A: A Walmart wardrobe or a chair—honestly, still unconfirmed. But jokes aside, you will be able to build:
