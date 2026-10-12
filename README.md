@@ -5,6 +5,10 @@
 
 ---
 
+## Nothing is ever eternal
+
+As expected, this repo will not continue - at least, that is what I have decided. Why? Because while working on this repo and starting university, my learning pace began to slow down significantly. So, instead of sacrificing my growth and dragging out the process, I decided that the smarter choice was to step away from this repo.
+
 ## What is this all about?
 
 This space is dedicated entirely to **AI Engineering, ML Engineering, Graph ML, and Geometric ML** (fair warning: I added *a lot* of geometry, so get ready). Basically, all the cutting-edge, AI-ish stuff you actually want to build.
